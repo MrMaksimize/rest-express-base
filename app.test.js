@@ -6,8 +6,9 @@ describe('express rest api server', function(){
 
   it('posts an object', function(done){
     superagent.post('http://localhost:3000/collections/test')
-      .send({ name: 'John'
-        , email: 'john@rpjs.co'
+      .send({
+        name: 'John',
+        email: 'john@rpjs.co'
       })
       .end(function(e, res){
         // console.log(res.body)

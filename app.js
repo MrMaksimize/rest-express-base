@@ -8,7 +8,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(logger('dev'))
 
-var db = mongoskin.db('mongodb://@localhost:27017/test', {safe:true})
+var db = mongoskin.db('mongodb://@localhost:27017/estart', {safe:true})
 
 app.param('collectionName', function(req, res, next, collectionName){
   req.collection = db.collection(collectionName)
